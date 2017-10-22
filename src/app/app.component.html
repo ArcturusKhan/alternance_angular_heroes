@@ -2,11 +2,7 @@
 <div style="text-align:center">
   <h1>{{title}}</h1>
 </div>
-<div *ngIf="selectedHero">
-  <h2>{{selectedHero.name}} details !</h2>
-  <label>id: </label>{{selectedHero.id}}
-  <input [(ngModel)]="selectedHero.name" placeholder="name" />
-</div>
+<hero-detail [hero]="selectedHero"></hero-detail>
 <hr />
 <ul class="heroes">
   <li *ngFor="let hero of heroes"
